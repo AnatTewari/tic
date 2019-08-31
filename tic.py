@@ -27,6 +27,13 @@ def player_input():
             player2 = 'X'
     return player1,player2
 
+def place_marker(board, marker, position):
+    for pos in range(len(board)):
+        if board[pos] == position:
+            board[pos] = marker
+    test_board = board
+    return test_board
+
 def win_check(board, marker):
     
     mark_list = list(marker*3)
